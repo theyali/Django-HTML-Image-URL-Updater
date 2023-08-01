@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django-HTML Image URL Updater+</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="row">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <ul class="menu">
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="socials">
+                        <img src="./img/icons/facebook.png" alt="" class="social-icon">
+                        <img src="./img/icons/instagram.png" alt="" class="social-icon">
+                        <img src="./img/icons/linkedin.png" alt="" class="social-icon">
+                        <img src="./img/icons/social.png" alt="" class="social-icon">
+                        <img src="./img/icons/telegram.png" alt="" class="social-icon">
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <h2>Eel HTML Image URL Updater</h2>
+        <div class="row">
+            <div class="col-4">
+                <label for="html-file">Select HTML File:</label>
+                <button type="button" onclick="getPathToFile()">Select File</button>
+            </div>
+            <div class="col-4">
+                <label for="substring-to-remove">Substring to Remove from src:</label>
+                <input type="text" id="substring-to-remove" placeholder="assets/img/">
+            </div>
+            <div class="col-4">
+                <label for="images-folder">Images Folder:</label>
+                <input type="text" id="images-folder" placeholder="auto/img/">
+            </div>
+            <button class="btn btn-primary" onclick="updateImages()">Update Images</button>
+        </div>
+
+    
+
+    
+
+    
+
+    </div>
+   
+
+    <script>
+        function getPathToFile() {
+            eel.pythonFunction()(r => htmlPath = r);
+        };
+        function updateImages() {
+            var htmlFile = htmlPath
+            var substringToRemove = document.getElementById("substring-to-remove").value;
+            var imagesFolder = document.getElementById("images-folder").value;
+            eel.update_img_src(htmlFile, substringToRemove, imagesFolder);
+        }
+    </script>
+</body>
+</html>
