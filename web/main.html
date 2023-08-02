@@ -9,17 +9,15 @@
 <body>
     <header class="header">
         <nav>
-            <div class="row">
-                <div class="col-4">
-                    <div class="logo">
-                        <img src="./img/logo.png" alt="">sfsdfdsf
-                    </div>
+            <div class="row header-inner">
+                <div class="col-3 logo-box">
+                    <img src="./img/logo.png" alt="" class="logo">
                 </div>
-                <div class="col-4">
-                    <ul class="menu">
-                        <li><a href="main.html">Home</a></li>
+                <div class="col-5">
+                    <div class="menu">
+                        <li class="active"><a href="main.html" >Home</a></li>
                         <li><a href="about.html">About</a></li>
-                    </ul>
+                    </div>
                 </div>
                 <div class="col-4">
                     <div class="socials">
@@ -37,17 +35,18 @@
     </header>
 
     <div class="container-fluid">
-        <h2>Eel HTML Image URL Updater</h2>
+        <h4>Django-HTML Image URL Updater+</h4>
         <div class="row">
             <div class="col-4">
                 <label for="html-file">Select HTML File:</label>
-                <button type="button" onclick="getPathToFile()">Select File</button>
+                <button class="btn btn-primary" type="button" onclick="getPathToFile()">Select File</button>
             </div>
-            <div class="col-4">
+            <div class="col-4 form-group">
                 <label for="substring-to-remove">Substring to Remove from src:</label>
-                <input type="text" id="substring-to-remove" placeholder="assets/img/">
+                <input class="form-contol" type="text" id="substring-to-remove" placeholder="assets/img/" aria-describedby="subStrHelp">
+                <small id="subStrHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-            <div class="col-4">
+            <div class="col-4 form-group">
                 <label for="images-folder">Images Folder:</label>
                 <input type="text" id="images-folder" placeholder="auto/img/">
             </div>

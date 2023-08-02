@@ -1,6 +1,93 @@
-.header{
-    min-height: 50px;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:aliceblue;
+}
+.header, nav, .header-inner{
+    height: 50px;
     background-color: #191a1e;
     box-shadow: 0 1px 2px 0 black;
 }
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
 
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 45px;
+}
+
+
+.menu{
+    display: flex;
+    margin-right: 300px;
+}
+.menu li {
+    cursor: pointer;
+    list-style: none;
+    padding: 13px 10px;
+    position: relative; 
+}
+.menu li:hover{
+    box-shadow: 0 2px 2px 0 black;
+
+}
+.menu li:hover::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(32, 62, 101, 1) 0%, rgba(69, 204, 207, 0.87718837535014) 50%, rgba(32, 62, 101, 1) 100%);
+}
+
+.menu li a{
+    font-size: 15px;
+    color: white;
+}
+
+.menu li a:hover{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+.active{
+    box-shadow: 0 1px 2px 0 black;
+}
+.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(32, 62, 101, 1) 0%, rgba(69, 204, 207, 0.87718837535014) 50%, rgba(32, 62, 101, 1) 100%);
+}
+
+
+.socials{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.social-icon{
+    width: 20px;
+    cursor: pointer;
+}
+.social-icon:hover{
+    transition: 0.5s;
+    scale: 0.9;
+}
