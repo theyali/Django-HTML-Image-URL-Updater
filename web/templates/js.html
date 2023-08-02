@@ -21,10 +21,18 @@
                 </div>
                 <div class="col-4">
                     <div class="socials">
-                        <img src="../img/icons/facebook.png" alt="" class="social-icon">
-                        <img src="../img/icons/linkedin.png" alt="" class="social-icon">
-                        <img src="../img/icons/social.png" alt="" class="social-icon">
-                        <img src="../img/icons/telegram.png" alt="" class="social-icon">
+                        <a href="https://www.facebook.com/ali.haciyev.12576/" target="_blank">
+                            <img src="../img/icons/facebook.png" alt="" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/ali-hajiyev-205547203/" target="_blank">
+                            <img src="../img/icons/linkedin.png" alt="" class="social-icon">
+                        </a>
+                        <a href="https://github.com/theyali" target="_blank">
+                            <img src="../img/icons/social.png" alt="" class="social-icon">
+                        </a>
+                        <a href="https://t.me/theiali" target="_blank">
+                            <img src="../img/icons/telegram.png" alt="" class="social-icon">
+                        </a>
                     </div>
                 </div>
 
@@ -35,7 +43,7 @@
 
     <div class="container-fluid">
         <div class="text-center">
-            <h4>Django-HTML Image URL Updater+</h4>
+            <h4>Django-HTML Js URL Updater+</h4>
         </div>
         <div class="row main-row">
             <div class="col-4">
@@ -49,14 +57,14 @@
                 <small id="subStrHelp" class="form-text text-muted">Input a pattern of the string to remove</small>
             </div>
             <div class="col-4 form-group">
-                <label for="images-folder">Images Folder in your static Django-app:</label>
-                <input type="text" class='subStr-del-input' id="images-folder" placeholder="auto/img/">
+                <label for="js-folder">Js Folder in your static Django-app:</label>
+                <input type="text" class='subStr-del-input' id="js-folder" placeholder="auto/img/">
                 <small id="subStrHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 
             </div>
             <div class="col-12">
                 <div class="main-btn">
-                    <button class="btn btn-primary" onclick="updateImages()">Update Images</button>
+                    <button class="btn btn-primary" onclick="updateJs()">Update Js</button>
     
                 </div>
             </div>
@@ -69,11 +77,11 @@
         function getPathToFile() {
             eel.pythonFunction()(r => htmlPath = r);
         };
-        function updateImages() {
+        function updateJs() {
             var htmlFile = htmlPath
             var substringToRemove = document.getElementById("substring-to-remove").value;
-            var imagesFolder = document.getElementById("images-folder").value;
-            eel.update_img_src(htmlFile, substringToRemove, imagesFolder);
+            var jsFolder = document.getElementById("js-folder").value;
+            eel.update_js_src(htmlFile, substringToRemove, jsFolder);
         }
     </script>
 </body>
