@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django-HTML URL Updater+</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="row header-inner">
+                <div class="col-3 logo-box">
+                    <img src="../img/logo.png" alt="" class="logo">
+                </div>
+                <div class="col-5">
+                    <div class="menu">
+                        <li class="active"><a href="main.html" >Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="socials">
+                        <img src="../img/icons/facebook.png" alt="" class="social-icon">
+                        <img src="../img/icons/linkedin.png" alt="" class="social-icon">
+                        <img src="../img/icons/social.png" alt="" class="social-icon">
+                        <img src="../img/icons/telegram.png" alt="" class="social-icon">
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="text-center">
+            <h4>Django-HTML URL Updater+</h4>
+        </div>
+        <div class="row main-row">
+            <div class="col-12">
+                <ul class="text-center main-list">
+                    <a href="images.html"><li>Images Url</li></a>
+                    <a href="css.html"><li>Css Url</li></a>
+                    <a href="js.html"><li>Js Url</li></a>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+   
+
+    <script>
+        function getPathToFile() {
+            eel.pythonFunction()(r => htmlPath = r);
+        };
+        function updateImages() {
+            var htmlFile = htmlPath
+            var substringToRemove = document.getElementById("substring-to-remove").value;
+            var imagesFolder = document.getElementById("images-folder").value;
+            eel.update_img_src(htmlFile, substringToRemove, imagesFolder);
+        }
+    </script>
+</body>
+</html>

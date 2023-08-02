@@ -5,11 +5,15 @@
 body{
     background-color:aliceblue;
 }
-.header, nav, .header-inner{
+.header, nav{
     height: 50px;
     background-color: #191a1e;
     box-shadow: 0 1px 2px 0 black;
 }
+.header-inner{
+    width: 100%;
+}
+
 .header-inner {
     display: flex;
     align-items: center;
@@ -86,8 +90,42 @@ body{
 .social-icon{
     width: 20px;
     cursor: pointer;
+    margin-left: 5px;
 }
 .social-icon:hover{
     transition: 0.5s;
     scale: 0.9;
+}
+.main-row{
+    font-size: 15px;
+}
+.subStr-del-input{
+    width: 100px;
+}
+
+.main-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-list{
+    border-radius: 10px;
+    list-style: none;
+
+}
+.main-list li{
+    padding: 10px 10px;
+    box-shadow: 0 1px 2px 0 black;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.main-list li:hover{
+    transition: 0.7s;
+    scale: 0.9;
+}
+.main-list a{
+    color: black;
+
 }
